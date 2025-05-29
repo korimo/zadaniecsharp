@@ -1,0 +1,12 @@
+{
+  "OpenAI": {
+    "ApiKey": "your openai API key"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}

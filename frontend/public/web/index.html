@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>web biolabopratória</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header { display: flex; align-items: center; justify-content: space-between; padding: 1rem; background: #e3e3e3; }
+    nav ul { list-style: none; display: flex; gap: 1rem; padding: 0; margin: 0; }
+    nav ul li { font-weight: bold; }
+    .main { display: flex; padding: 2rem; gap: 2rem; }
+    .cta { text-align: center; margin: 2rem; }
+    .logo-title {  display: flex;  align-items: center;  gap: 2rem;  padding: 1.5rem 2rem;}
+    .logo {  max-width: 120px;  height: auto;}
+    .titles h1 {  font-size: 1.8rem;  margin: 0;}
+    .titles h3 {  font-size: 1.2rem;  margin-top: 0.5rem;  font-weight: normal;}
+    footer { background: #333; color: white; padding: 1rem; text-align: center; }
+    img { max-width: 100%; height: auto; }
+
+		.limited-width {		  max-width: 50%;		  text-align: justify;		}
+
+		.benefits {		  display: flex;		  gap: 2rem;		  padding: 2rem;		}
+
+		.benefit {		  flex: 1;		  text-align: center;		}
+
+		.benefit img {		  width: 100%;		  max-width: 200px;		  margin-bottom: 1rem;		}
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div  class="logo-title"> <img src="image/logo.png" alt="@HtmlEncoder.Default.Encode(request.Prompt)" class="logo"  style="width: 120px; height: auto;" />
+  </div>
+  <nav class="menu">
+    <ul>
+      <li>Domov</li>
+      <li>Produkty</li>
+      <li>Kontakt</li>
+    </ul>
+  </nav>
+</header>
+
+<section class="intro">
+  <div  class="logo-title">
+    <div class="titles">
+	    <h1>Vitajte na stránke nášho Web Biolabopratória: Vedecký svet v praxi</h1>
+	    <h3>"Výskumné biolaboratórium na dosah kliku: Moderné online riešenia pre vaše vedecké experimenty"</h3>
+    </div>
+  </div>
+</section>
+
+
+<div class="main">
+  <div class="text limited-width">Vitajte na našom webe venovanom biolabopratóriám. Tu nájdete všetko, čo potrebujete vedieť o biologických laboratóriách, ich fungovaní, vybavení a dôležitých bezpečnostných opatreniach. Ponúkame detailné informácie o rozličných typoch biolabopratórií, ich špecializácii a najnovších technológiách používaných v tomto odbore. Či už ste študent, vedecký pracovník alebo jednoducho záujemca o biológiu a vedecký výskum, veríme, že na našej stránke nájdete užitočné a zaujímavé informácie. Tešíme sa na vašu návštevu a dúfame, že vám naše stránky poskytnú cenné informácie a inšpiráciu.</div>
+  <div class="image">		<img src="image/feature.png" alt="@HtmlEncoder.Default.Encode(request.Prompt)" style="width: 2048px; height: auto;"/>      
+  </div>
+</div>
+
+  <div class="cta">
+    <button>Kontaktujte nás</button>
+  </div>
+  
+  
+  <section class="benefits">
+  <div class="benefit">    <img src="image/benefit1.png" alt="Benefit 1">
+    <h3>"Objavte svet vysoko kvalitných biologických testov s nami - Biolaboprátoria online!"</h3>
+  <p>Pozývame vás k objavovaniu sveta vysoko kvalitných biologických testov prostredníctvom našich služieb. Vstúpte do online prostredia Biolaboprátoria a preskúmajte rôznorodosť testov, ktoré ponúkame. S nami môžete získať prístup k vede na najvyššej úrovni.</p>
+  </div>
+  <div class="benefit">    <img src="image/benefit2.png" alt="Benefit 2">
+    <h3>"Objavte výhody online biolabopratória - kvalitné služby, rýchle výsledky"</h3>
+  <p>Poznajte prednosti, ktoré prináša využívanie online biolabopratória. Táto moderná forma laboratórnej diagnostiky zaručuje kvalitu poskytovaných služieb a efektivitu v práci, pretože výsledky testov sú dostupné v krátkom čase. Vďaka online biolabopratóriu máte možnosť byť informovaní o vašom zdravotnom stave rýchlo a efektívne.</p>
+  </div>
+  <div class="benefit">    <img src="image/benefit3.png" alt="Benefit 3">
+    <h3>"Získajte presné výsledky a udržiavajte bezpečnosť s naším biolabopratóriom online"</h3>
+  <p>S naším online biolabopratóriom budete mať prístup k presným a spoľahlivým výsledkom. Zároveň vám zaručujeme bezpečnosť počas celého procesu. Dôverujte nám a využite možnosti, ktoré ponúka naše biolabopratórium na internete.</p>
+  </div>
+</section>
+
+
+  
+  <footer>
+    <img src="image/logo.png" alt="Logo" style="width: 120px; height: auto;">
+    <p>&copy; 2025 AI Web Builder</p>
+    <div class="socials">
+		<img src="/images/logoig.png" alt="Instagram logo" width="32" height="32">
+		<img src="/images/logofb.png" alt="Facebook logo" width="32" height="32">
+		<img src="/images/logoX.png" alt="X logo" width="32" height="32">
+    </div>
+  </footer>
+<script>
+  const imgs = document.images;
+  let loaded = 0;
+  const total = imgs.length;
+  for (let i = 0; i < total; i++) {
+    imgs[i].onload = imgs[i].onerror = () => {
+      loaded++;
+      if (loaded === total) {
+        parent.postMessage({ allImagesLoaded: true }, "*");
+      }
+    };
+  }
+</script>
+</body>
+</html>
