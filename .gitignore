@@ -6,6 +6,7 @@
 /api/
 /obj/
 /appsettings.*.json
+appsettings.json
 .env
 *.user
 
