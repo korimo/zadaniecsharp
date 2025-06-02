@@ -6,6 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { motion } from 'framer-motion';
 import axios from 'axios';
 
+const API_BASE = import.meta.env.VITE_API_URL || '';
 const App = () => {
   const [prompt, setPrompt] = useState('');
   const [htmlPreview, setHtmlPreview] = useState('');
@@ -19,7 +20,7 @@ const App = () => {
     setError('');
     setReadyToDownload(false);
     try {
-      const response = await axios.post('/api/generate', { prompt });
+      const response = await axios.post('${API_BASE}/api/generate', { prompt });
       if (response.data.html) {
         setHtmlPreview(response.data.html);
         setReadyToDownload(true);
@@ -71,7 +72,7 @@ const App = () => {
             {readyToDownload && (
               <div className="text-center mt-6">
                 <a
-                  href="/api/download"
+                  href="${API_BASE}/api/download"
                   download
                   className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
                 >
