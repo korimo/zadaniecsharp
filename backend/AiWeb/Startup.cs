@@ -26,11 +26,12 @@ namespace AiWeb
 						services.AddScoped<WebsiteCache>();
             services.AddCors(options =>
             {
-            	
                 options.AddPolicy("AllowReact",
-                    builder => builder.WithOrigins("http://localhost:5173", "http://frontend")
-                                      .AllowAnyHeader()
-                                      .AllowAnyMethod());
+                    builder => builder.WithOrigins(
+                        "http://localhost:5173",
+                        "http://frontend",
+                        "https://ai-generate-web.onrender.com" // ⬅️ pridaj túto
+                    ));
             });
         }
 
