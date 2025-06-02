@@ -31,7 +31,11 @@ namespace AiWeb
                         "http://localhost:5173",
                         "http://frontend",
                         "https://ai-generate-web.onrender.com" // ⬅️ pridaj túto
-                    ));
+                    )
+                    .AllowAnyHeader()
+                    .AllowAnyMethod()
+                    
+                    );
             });
         }
 
