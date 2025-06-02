@@ -54,7 +54,7 @@ namespace AiWeb
             app.UseEndpoints(endpoints =>            
             {
                 // testovacia hláška na /
-    endpoints.MapGet("/", async context =>
+                endpoints.MapGet("/", async context =>
                 {
                     await context.Response.WriteAsync("? Backend beží na Renderi");
                 });
