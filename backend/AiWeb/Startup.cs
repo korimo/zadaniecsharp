@@ -51,8 +51,13 @@ namespace AiWeb
             app.UseStaticFiles(); // musí byť pred app.UseRouting()
             app.UseRouting();
             app.UseAuthorization();
-            app.UseEndpoints(endpoints =>
+            app.UseEndpoints(endpoints =>            
             {
+                // testovacia hláška na /
+    endpoints.MapGet("/", async context =>
+                {
+                    await context.Response.WriteAsync("? Backend beží na Renderi");
+                });
                 endpoints.MapControllers();
             });
         }
