@@ -1,0 +1,15 @@
+name: GET Render Status
+
+on:
+  schedule:
+    - cron: '*/50 * * * *'  # každých 50 minút (UTC)
+  workflow_dispatch:         # voliteľné – na ručné spustenie
+
+jobs:
+  get-backend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: GET backend status
+        run: |
+          echo "Volám https://zadaniecsharp.onrender.com/"
+          curl -s https://zadaniecsharp.onrender.com/ || echo "Chyba alebo prázdna odpoveď"
